@@ -1,6 +1,5 @@
-/* Leetcode 155: Min stack. */
-// Difficulty:
-// Student ID: 25120267.
+/* Leetcode 155: Min Stack. */
+// Difficulty: Medium.
 
 #include <iostream>
 #include <vector>

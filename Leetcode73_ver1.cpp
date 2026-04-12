@@ -1,6 +1,5 @@
-/* Leetcode 73: Set matrix zeroes. */
+/* Leetcode 73: Set Matrix Zeroes. */
 // Difficulty: Medium.
-// Student ID: 25120267.
 
 #include <iostream>
 #include <vector>

@@ -1,6 +1,5 @@
-/* Leetcode 20: Valid parentheses. */
+/* Leetcode 20: Valid Parentheses. */
 // Difficulty: Easy.
-// Student ID: 25120267.
 
 #include <iostream>
 #include <vector>
