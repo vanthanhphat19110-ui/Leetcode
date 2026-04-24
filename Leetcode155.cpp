@@ -1,4 +1,4 @@
-/* Leetcode 155: Min Stack. */
+/* Leetcode 155: Min stack. */
 // Difficulty: Medium.
 
 #include <iostream>

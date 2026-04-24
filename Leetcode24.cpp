@@ -1,4 +1,5 @@
 /* Leetcode 24: Swap nodes in pairs. */
+// Difficulty: Medium.
 
 #include <iostream>
 using namespace std;
@@ -12,21 +13,25 @@ struct ListNode
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-ListNode *swapPairs(ListNode *head)
+class Solution
 {
-    ListNode *dummy = new ListNode();
-    dummy->next = head;
-    ListNode *prev = dummy;
-    while (prev->next != nullptr && prev->next->next != nullptr)
+public:
+    ListNode *swapPairs(ListNode *head)
     {
-        ListNode *first = prev->next;
-        ListNode *second = first->next;
-        first->next = second->next;
-        second->next = first;
-        prev->next = second;
-        prev = first;
+        ListNode *dummy = new ListNode();
+        dummy->next = head;
+        ListNode *prev = dummy;
+        while (prev->next != nullptr && prev->next->next != nullptr)
+        {
+            ListNode *first = prev->next;
+            ListNode *second = first->next;
+            first->next = second->next;
+            second->next = first;
+            prev->next = second;
+            prev = first;
+        }
+        head = dummy->next;
+        delete dummy;
+        return head;
     }
-    head = dummy->next;
-    delete dummy;
-    return head;
-}
+};

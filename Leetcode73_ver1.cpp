@@ -1,4 +1,4 @@
-/* Leetcode 73: Set Matrix Zeroes. */
+/* Leetcode 73: Set matrix zeroes. */
 // Difficulty: Medium.
 
 #include <iostream>

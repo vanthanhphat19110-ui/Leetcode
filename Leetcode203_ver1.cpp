@@ -1,4 +1,5 @@
 /* Leetcode 203: Remove linked list elements. */
+// Difficulty: Easy.
 
 #include <iostream>
 using namespace std;
@@ -12,27 +13,31 @@ struct ListNode
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-ListNode *removeElements(ListNode *head, int val)
+class Solution
 {
-    ListNode *dummy = new ListNode();
-    dummy->next = head;
-    ListNode *prev = dummy;
-    ListNode *curr = head;
-    while (curr != nullptr)
+public:
+    ListNode *removeElements(ListNode *head, int val)
     {
-        if (curr->val == val)
+        ListNode *dummy = new ListNode();
+        dummy->next = head;
+        ListNode *prev = dummy;
+        ListNode *curr = head;
+        while (curr != nullptr)
         {
-            prev->next = curr->next;
-            delete curr;
-            curr = prev->next;
+            if (curr->val == val)
+            {
+                prev->next = curr->next;
+                delete curr;
+                curr = prev->next;
+            }
+            else
+            {
+                prev = curr;
+                curr = curr->next;
+            }
         }
-        else
-        {
-            prev = curr;
-            curr = curr->next;
-        }
+        head = dummy->next;
+        delete dummy;
+        return head;
     }
-    head = dummy->next;
-    delete dummy;
-    return head;
-}
+};
