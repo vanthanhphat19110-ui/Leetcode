@@ -1,4 +1,4 @@
-/* Leetcode 20: Valid Parentheses. */
+/* Leetcode 20: Valid parentheses. */
 // Difficulty: Easy.
 
 #include <iostream>
